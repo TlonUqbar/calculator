@@ -1,0 +1,295 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nixie+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato:100&display=swap");
+
+@font-face {
+  font-family: "Nixie";
+  font-display: swap;
+  src: url("fonts/TT Chocolates ExtraLight.otf");
+  src: url("fonts/TT Chocolates ExtraLight.otf") format("opentype");
+}
+
+
+:root{
+
+  --base-text-color: rgb(62, 50, 62) ;
+  --base-background-color: rgb(236, 205, 187);
+
+  --display-digits: rgb(210, 91, 32);
+  --display-small-digits: 
+  
+
+  --keys-digits-text: rgb(52, 46, 64);
+  --keys-digits-background: rgb(210, 239, 233);
+  --keys-operation-background: rgb(242, 154, 54);
+  --keys-eraser-background:  rgb(245, 73, 61);
+
+  --primary-color: ;
+  --secondary-color: rgb(70, 55, 61);
+  --tertiary-color: rgb(47, 47, 58);
+
+  --primary-background: ;
+  --secondary-background: ;
+  --tertiary-background: ;
+
+  --accent-color: rgb(191, 102, 24);
+  --call-action-color: ;
+
+  --light-color: ;
+  --medium-color: ;
+  --dark-color: ;
+
+
+  --border-color: rgb(254, 226, 71);
+
+  --info: ;
+  --warning: ;
+  --error: ;
+  --success: ;
+  --disabled: ;
+
+  --hover: ;
+  --active: ;
+  --label: ;
+
+  --variants: ;
+
+}
+
+
+
+body {
+  height: 100dvh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: repeating-conic-gradient(from 11.25deg, black 0deg 22.5deg, #0f0f0f 22.5deg 45deg);
+  background-color: black;
+  background-repeat: no-repeat;
+}
+
+#main-container{
+  display: flex;
+  flex-direction:row;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--frame-color);
+  flex-basis: 380px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  height: 280px;
+}
+
+#screen-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  background-color: var(--tertiary-color);
+  flex: 1 1 280px;
+  height: 100px;
+  font-family: "Nixie";
+  gap: 10px;
+  background-color: #0f0f0f;
+
+}
+
+#intermediate{
+  display:flex;
+  /* flex-direction: row; */
+  justify-content: space-evenly;
+  font-size: 26px;
+
+  color: #feb454;
+  text-shadow: 0 0 20px #F58732;
+  flex: 1 1 auto;
+}
+
+#result{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 46px;
+  /* color: var(--display-digits); */
+  color: #feb454;
+  text-shadow: 0 0 20px #F58732;
+  flex: 1 1 auto;
+}
+
+.result{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-around;
+  gap: 4px;
+}
+
+.main{
+  display: flex;
+  flex-direction: row;
+  width: 370px;
+  height: 50px;
+  /* border: 1px solid burlywood; */
+}
+
+.small{
+  display: flex;
+  flex-direction: row;
+  width: 370px;
+  height: 30px;
+}
+
+/* .r10, .r9, .r8{
+  display: inline-block;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color:white;
+} */
+
+
+.digit div {
+  display: inline-block;
+  width: 30px;
+  height: 100px;
+}
+
+.small > .digit div {
+  width:25px;
+}
+
+div  p {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  width: 35px;
+  text-align: center;
+  transition: 0.3s ease color, 0.3s ease text-shadow;
+  /* color: var(--base-text-color); */
+  color: rgb(93, 91, 91);
+}
+
+
+p.active {
+    color: #feb454;
+    text-shadow: 0 0 20px #F58732;
+    z-index: 1;
+}
+
+
+
+
+/* ==============   ============= */
+#inputs-container{
+  display: flex;
+  flex-direction: row;
+  flex-basis: 500px;
+  justify-content: center;
+  align-self: end;
+  height: 170px;
+  /* font-family: "Iceland"; */
+  /* font-family: "Audiowide"; */
+  /* font-family: "Bungee Hairline"; */
+  /* font-family: "Nixie One"; */
+  font-family: "Nixie";
+  /* font-family: "Roboto"; */
+  /* font-family: "Fira Code"; */
+  /* font-size: "Lato"; */
+  font-size: 26px;
+  font-weight: bold;
+}
+
+#erase{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  background-color: wheat;
+  flex-basis: 50px;
+  gap: 2px;
+}
+
+#numbers{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: wheat;
+  flex-basis: 200px;
+}
+
+#operations{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: wheat;
+  flex-basis: 120px;
+  /* background-color: var(--keys-operation-background); */
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  flex: auto;
+  background-color: var();
+  gap: 2px;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  flex: 1 1 auto;
+  gap: 2px;
+}
+
+.number{
+  display: flex;
+  /* flex-basis: 50px; */
+  justify-content: center;
+  align-items: center;
+  background-color: var(--keys-digits-background);
+  border: 1px solid var(--base-background-color);
+  flex:1 1 30px;
+}
+
+.operation{
+  display: flex;
+  /* flex-basis: 70px; */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--base-background-color);
+  flex:1 1 30px;
+  /* height: 58px; */
+  background-color: var(--keys-operation-background);
+}
+
+
+
+.eraser{
+  display: flex;
+  flex-direction: row;
+  background-color: var(--keys-eraser-background);
+  flex: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.plus{
+  flex-direction: column;
+  justify-content: center
+}
+.times{
+  flex-direction: column;
+  justify-content: center;
+}
