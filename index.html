@@ -3,433 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nixie Calculator</title>
+  <title>Retro Nixie Calculator</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="https://fav.farm/%F0%9F%96%A9" /> 
   <script src="script.js" defer></script>
-  
 </head>
 <body>
-  <div id="main-container">
-    <div id="screen-container">
-      <div id="intermediate">
-        <div class="small">
-          <div class="digit">
-            <div>
-              <p class="active">.</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p> 
+  <div id="calculator-container">
+    <div id="screen-section">
+      <div id="screen">
+        <div class="screens-container">
+          <div class="top-screen">
+              <div class="intermediate">123456789012</div>
+              <div class="operator">+</div>
             </div>
+          <div class="bottom-screen">
+            <div class="result">-123456789012</div>
           </div>
-          <div class="digit">
-            <div>
-              <p class="active">0</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p> 
-            </div>
-          </div>
-          <div class="digit">
-            <div>
-              <p class="active">0</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p> 
-            </div>
-          </div>
-          <div class="digit">
-            <div>
-              <p class="active">0</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p> 
-            </div>
-          </div>
-          <div class="digit">
-            <div>
-              <p class="active">0</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p>
-            </div> 
-          </div>
-          <div class="digit">
-            <div>
-              <p class="active">0</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p> 
-            </div>
-          </div>
-          <div class="digit">
-            <div>
-              <p class="active">0</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p> 
-            </div>
-          </div>
-          <div class="digit">
-            <div>
-              <p class="active">0</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p> 
-            </div>
-          </div>
-          <div class="digit">
-            <div>
-              <p>0</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p class="active">4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p> 
-            </div>
-          </div>
-          <div class="digit">
-              <div>
-              <p>0</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p class="active">4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p> 
-            </div>
-          </div>
-          <div class="digit">
-            <div>
-            <p>0</p>
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-            <p>5</p>
-            <p class="active">6</p>
-            <p>7</p>
-            <p>8</p>
-            <p>9</p> 
-          </div>
-        </div>
-        <div class="digit">
-          <div>
-          <p>0</p>
-          <p class="active">1</p>
-          <p>2</p>
-          <p>3</p>
-          <p>4</p>
-          <p>5</p>
-          <p>6</p>
-          <p>7</p>
-          <p>8</p>
-          <p>9</p> 
-        </div>
-      </div>
-        </div>
-      </div>
-      <div id="result">
-        <div class="main">
-          <div class="digit">
-            <div>
-              <p class="active">.</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p> 
-            </div>
-          </div>
-          <div class="digit">
-            <div>
-              <p class="active">0</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p> 
-            </div>
-          </div>
-          <div class="digit">
-            <div>
-              <p class="active">0</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p> 
-            </div>
-          </div>
-          <div class="digit">
-            <div>
-              <p class="active">0</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p> 
-            </div>
-          </div>
-          <div class="digit">
-            <div>
-              <p class="active">0</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p>
-            </div> 
-          </div>
-          <div class="digit">
-            <div>
-              <p class="active">0</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p> 
-            </div>
-          </div>
-          <div class="digit">
-            <div>
-              <p class="active">0</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p> 
-            </div>
-          </div>
-          <div class="digit">
-            <div>
-              <p class="active">0</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p> 
-            </div>
-          </div>
-          <div class="digit">
-            <div>
-              <p>0</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p class="active">4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p> 
-            </div>
-          </div>
-          <div class="digit">
-              <div>
-              <p>0</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p class="active">4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p> 
-            </div>
-          </div>
-          <div class="digit">
-            <div>
-              <p>0</p>
-              <p>1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
-              <p>5</p>
-              <p class="active">6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p> 
-            </div>
-          </div>
-          <div class="digit">
-            <div>
-              <p>0</p>
-              <p class="active">1</p>
-              <p>2</p>
-              <p>3</p>
-              <p>4</p>
-              <p>5</p>
-              <p>6</p>
-              <p>7</p>
-              <p>8</p>
-              <p>9</p> 
-            </div>
-         </div>
-          <!-- <div class="nixie">1</div>
-          <div class="nixie">2</div>
-          <div class="nixie">3</div>
-          <div class="nixie">4</div>
-          <div class="nixie">5</div>
-          <div class="nixie">6</div> -->
         </div>
       </div>
     </div>
-    <div id="inputs-container">
-      <div id="erase">
-        <div class="column">
-          <div class="operation">&percnt;</div>          
-          <div class="eraser">AC</div>
-          <div class="eraser">C</div>
-          <div class="eraser">&#x2326;</div>
-          
+    <div id="keypad-section">
+      <div id="keypad">
+        <div class="top">
+            <div class="function">AC</div>
+            <div class="function">C</div>
+            <div class="function">&#x2326;</div>
         </div>
-      </div>
-      <div id="numbers">
-        <div class="row">
-          <div class="number">7</div>
-          <div class="number">8</div>
-          <div class="number">9</div>
+        <div class="bottom">
+          <div id="digits">
+            <div class="digit">7</div>
+            <div class="digit">8</div>
+            <div class="digit">9</div>
+            <div class="digit">4</div>
+            <div class="digit">5</div>
+            <div class="digit">6</div>
+            <div class="digit">1</div>
+            <div class="digit">2</div>
+            <div class="digit">3</div>
+            <div class="digit">0</div>
+            <div class="digit">.</div>
+            <!-- <div class="digit">+/-</div> -->
+          </div>
+          <div id="operations">
+            <div class="operation">&plusmn</div>
+            <div class="operation">&percnt;</div>
+            <div class="operation">&times;</div>
+            <div class="operation">&divide;</div>
+            <div class="operation">&plus;</div>
+            <div class="operation">&minus;</div>
+            <div class="operation">&equals;</div>
+          </div>
         </div>
-        <div class="row">
-          <div class="number">4</div>
-          <div class="number">5</div>
-          <div class="number">6</div>
-        </div>
-        <div class="row">
-          <div class="number">1</div>
-          <div class="number">2</div>
-          <div class="number">3</div>
-        </div>
-        <div class="row">
-          <div class="number">0</div>
-          <div class="number">.</div>
-          <div class="number">&plusmn</div>
-        </div>
-
-      </div>
-      <div id="operations">
-        <div class="row">
-          <div class="operation times">&times;</div>
-          <div class="operation divide">&divide;</div>
-        </div>
-        <div class="row">
-          <div class="operation plus">&plus;</div>
-          <div class="operation minus">&minus;</div>
-        </div>
-
-        <div class="row">
-          <div class="operation">=</div>
-        </div>
-
-        <!-- <div class="column">
-          <div class="operation minus">&minus;</div>
-          <div class="operation plus">&plus;</div>
-          <div class="operation">=</div>
-        </div>
-
-        <div class="column">  
-          <div class="operation">&percnt;</div>
-          <div class="operation times">&times;</div>
-          <div class="operation divide">&divide;</div>
-          <div class="operation">&plusmn;</div>
-        </div> -->
-
-        <!-- <div class="row">
-          
-          
-          
-        </div> -->
       </div>
     </div>
   </div>
+  
 </body>
 </html>

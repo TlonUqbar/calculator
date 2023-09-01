@@ -1,20 +1,21 @@
 # Calculator
 
 Requirements:
-- [ ] All of the basic math operators you typically find on simple calculators.
-	- [ ] Add
-	- [ ] Subtract
-	- [ ] Multiply
-	- [ ] Divide
-- [ ] An operation consists of a number, an operator and another number.
-	- [ ] Create a variable for the first number
-	- [ ] Create a variable for the second number
-	- [ ] Create a variable for your operator
+- [x] All of the basic math operators you typically find on simple calculators.
+	- [x] Add
+	- [x] Subtract
+	- [x] Multiply
+	- [x] Divide
+  - [x] Percent
+- [x] An operation consists of a number, an operator and another number.
+	- [x] Create a variable for the first number
+	- [x] Create a variable for the second number
+	- [x] Create a variable for your operator
 	- [ ] Use the variables to update your display
-- [ ] Create a function `operate` that take a and operator and 2 numbers and then calls one of the above functions on the numbers
-- [ ] Create basic HTML calculator with buttons for each digit, each function and the "Equals" key
-- [ ] There should be a display for the calculator.
-- [ ] Add a "Clear" button.
+- [x] Create a function `operate` that take a and operator and 2 numbers and then calls one of the above functions on the numbers
+- [x] Create basic HTML calculator with buttons for each digit, each function and the "Equals" key
+- [x] There should be a display for the calculator.
+- [x] Add a "Clear" button.
 - [ ] Create the functions that populate the display when you click the number buttons.
 	- [ ] You should be storing the display value in a variable somewhere for use in the next step
 - [ ] Make the calculator work
