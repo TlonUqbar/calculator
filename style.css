@@ -65,8 +65,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: repeating-conic-gradient(from 11.25deg, black 0deg 22.5deg, #0f0f0f 22.5deg 45deg);
-  background-color: black;
+  background: repeating-conic-gradient(from 6deg, rgb(21, 27, 34) 10deg 24deg, rgb(15, 15, 15) 15deg 50deg);
   background-repeat: no-repeat;
 }
 
@@ -153,7 +152,7 @@ body {
   height: 90px;
   background-color: var(--screen-inner-background-color);
   border-radius: 0 0 10px 10px;
-  gap: 400px;
+  gap: 2px;
   border: 1px solid var(--screen-inner-border-color);
   color: var(--display-digits);
   text-shadow: 0 0 20px var(--screen-digit-shawdow-color);
@@ -161,7 +160,7 @@ body {
   font-size: 40px;
   justify-content: end;
   align-items: center;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
   border-top: none;
 }
 
@@ -169,8 +168,17 @@ body {
   display: flex;
   justify-content: end;
   align-items: center;
-  flex:1 1 200px;
-  margin: 0 10px;
+  padding-right: 2px;
+  /* flex:1 1 200px; */
+  /* margin: 0 6px 0 0; */
+}
+
+.sign{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-basis:25px;
+  padding-left: 4px;
 }
 
 #keypad-section{
