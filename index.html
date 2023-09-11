@@ -9,6 +9,7 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+
   <div id="calculator-container">
     <div id="screen-section">
       <div id="screen">
@@ -24,36 +25,39 @@
         </div>
       </div>
     </div>
+    <div id="name-tag" >
+      <h6 class="metalic">Calculon &alpha;</h6>
+    </div>
     <div id="keypad-section">
       <div id="keypad">
         <div class="top">
-            <div class="function">AC</div>
-            <div class="function">C</div>
-            <div class="function">&#x2326;</div>
+            <div class="function key" data-code="Escape" data-key="Escape">AC</div>
+            <div class="function key" data-code="Delete" data-key="Delete">C</div>
+            <div class="function key" data-code="Backspace" data-key="Backspace">&#x2326;</div>
         </div>
         <div class="bottom">
           <div id="digits">
-            <div class="digit">7</div>
-            <div class="digit">8</div>
-            <div class="digit">9</div>
-            <div class="digit">4</div>
-            <div class="digit">5</div>
-            <div class="digit">6</div>
-            <div class="digit">1</div>
-            <div class="digit">2</div>
-            <div class="digit">3</div>
-            <div class="digit">0</div>
-            <div class="digit">.</div>
+            <div class="digit key" data-code="Numpad7" data-key="7">7</div>
+            <div class="digit key" data-code="Numpad8" data-key="8">8</div>
+            <div class="digit key" data-code="Numpad9" data-key="9">9</div>
+            <div class="digit key" data-code="Numpad4" data-key="4">4</div>
+            <div class="digit key" data-code="Numpad5" data-key="5">5</div>
+            <div class="digit key" data-code="Numpad6" data-key="6">6</div>
+            <div class="digit key" data-code="Numpad1" data-key="1">1</div>
+            <div class="digit key" data-code="Numpad2" data-key="2">2</div>
+            <div class="digit key" data-code="Numpad3" data-key="3">3</div>
+            <div class="digit key" data-code="Numpad0" data-key="0">0</div>
+            <div class="digit key" data-code="NumpadDecimal"  data-key=".">.</div>
             <!-- <div class="digit">+/-</div> -->
           </div>
           <div id="operations">
-            <div class="operation">&plusmn</div>
-            <div class="operation">&percnt;</div>
-            <div class="operation">&times;</div>
-            <div class="operation">&divide;</div>
-            <div class="operation">&plus;</div>
-            <div class="operation">&minus;</div>
-            <div class="operation">&equals;</div>
+            <div class="operation key" data-code="NumpadEnter" data-key="Enter">&plusmn;</div>
+            <div class="operation key" data-code="Digit5" data-key="%">&percnt;</div>
+            <div class="operation key" data-code="NumpadMuliply" data-key="*">&times;</div>
+            <div class="operation key" data-code="NumpadDivde" data-key="/">&divide;</div>
+            <div class="operation key" data-code="NumpadAdd" data-key="+">&plus;</div>
+            <div class="operation key" data-code="NumpadSubtract" data-key="-">&minus;</div>
+            <div class="operation key" data-code="NumpadEqual" data-key="=">&equals;</div>
           </div>
         </div>
       </div>
