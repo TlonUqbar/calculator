@@ -6,10 +6,30 @@
   <title>Retro Nixie Calculator</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="https://fav.farm/%F0%9F%96%A9" /> 
+  <!-- <script src="script-redux.js" defer></script> -->
   <script src="script.js" defer></script>
+  <!-- <script src="script-functions.js" defer></script> -->
+  
 </head>
 <body>
-
+  <div id="help"><h2>?</h2></div>
+  <div id="overlay">
+    <div id="overlay-content">
+      <div class="exit"><h2>&times;</h2></div>
+      <div class="info ">Keyboard support is enabled.</div>
+      <div class="info">Turn NumLock On and use Keypad.</div>
+      <div class="info"><kbd>AC</kbd> is mapped to <kbd>Esc</kbd></div>
+      <div class="info"><kbd>C</kbd> is mapped to <kbd>Delete</kbd></div>
+      <div class="info"><kbd>⌦</kbd> is mapped to <kbd>Backspace</kbd></div>
+      <div class="info"><kbd>±</kbd> is mapped to <kbd>NumpadEnter</kbd></div>
+      <div class="info"><kbd>%</kbd> is mapped to <kbd>%</kbd></div>
+      <div class="info"><kbd>AC</kbd> Clears All</div>
+      <div class="info"><kbd>C</kbd> Clears Display</div>
+      <div class="info"><kbd>⌦</kbd> Deletes last digit</div>
+      <div class="info"><kbd>?</kbd> or <span class="exit2"><h2>&quest;</h2></span> for this menu </div>
+      <div class="info"><kbd>Spacebar</kbd> or <span class="exit2"><h2>&times;</h2></span> to exit </div>
+    </div>
+  </div>
   <div id="calculator-container">
     <div id="screen-section">
       <div id="screen">
@@ -19,7 +39,6 @@
               <div class="operator"></div>
             </div>
           <div class="bottom-screen">
-            <div class="sign"></div>
             <div class="result">0</div>
           </div>
         </div>
@@ -63,6 +82,5 @@
       </div>
     </div>
   </div>
-  
 </body>
 </html>

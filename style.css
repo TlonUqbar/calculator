@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap');
+
 @font-face {
   font-family: "Nixie";
   font-display: swap;
@@ -40,6 +43,12 @@
   --screen-digit-shawdow-color: #F58732;
   --screen-digit-small-color: #feb454;
   --screen-inner-border-color: rgb(105,105,105);
+  --kbd-keys: rgba(165, 42, 42, 1);
+  --overlay-text-color: rgba(186, 218, 85, 1);
+  --overlay-background-color: rgba(185, 185, 185, 0.4);
+  --overlay-button-border-color: #F58732;
+  --overlay-button-background-color: rgb(203,193,230);
+  --help-accent-color: rgb(255,222,55);
 }
 
 /* simple reset */
@@ -67,6 +76,15 @@ body {
   align-items: center;
   background: repeating-conic-gradient(from 6deg, rgb(21, 27, 34) 10deg 24deg, rgb(15, 15, 15) 15deg 50deg);
   background-repeat: no-repeat;
+}
+
+kbd{
+  font-family: 'Fira Code';
+  background-color: var(--base-background);
+  padding: 6px 14px;
+  border-radius: 4px;
+  color: var(--kbd-keys);
+  font-weight: 600;
 }
 
 #calculator-container{
@@ -130,6 +148,12 @@ body {
   letter-spacing: 4px;
 }
 
+.top-screen{
+  font-size: 20px;
+  letter-spacing: 0.8px;
+  gap: 0px;
+}
+
 .intermediate{
   display: flex;
   justify-content: center;
@@ -144,6 +168,9 @@ body {
   flex-basis:40px;
 }
 
+.operator{
+  flex-basis:20px;
+}
 
 .bottom-screen{
   display: flex;
@@ -164,13 +191,15 @@ body {
   border-top: none;
 }
 
+.bottom-screen{
+  letter-spacing: 2.5px;
+}
+
 .result{
   display: flex;
   justify-content: end;
   align-items: center;
   padding-right: 2px;
-  /* flex:1 1 200px; */
-  /* margin: 0 6px 0 0; */
 }
 
 .sign{
@@ -282,7 +311,6 @@ body {
   cursor: pointer;
 }
 
-
 .top{
   display: flex;
   flex-direction: row;
@@ -335,4 +363,104 @@ body {
     linear-gradient(#fff1, #fff0 15%, #fff1 85%, #fff3),
     linear-gradient(#fff2, #fff0 20%, #0000 96%, #0006),
     linear-gradient(90deg, #555, #333 10%, #ccc 33%, #666 48% 52%, #fff 66% 75%, #555 90% 95%, #ccc)
+}
+
+#help{
+  background-color: rgb(19,72,124);  /* rgb(203,193,230); */
+  color: var(--help-accent-color);
+  display:block;
+  position: absolute;
+  top: 20px;
+  right:20px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--overlay-button-border-color);
+  border-radius: 50%;
+  font-family: "Fira Code";
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgb(16, 16, 16), 
+              -2px -2px 6px rgb(16, 16, 16),
+              2px -2px 6px rgb(16, 16, 16),
+              -2px 2px 6px rgb(16, 16, 16) ;
+  box-shadow: 1px 1px 20px var(--help-accent-color);
+  cursor: pointer;
+}
+
+#help > h2{
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7); 
+  z-index: 3; 
+  cursor: pointer;
+}
+
+#overlay-content{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:30px;
+  background-color: var(--overlay-background-color) ;
+  height: 100dvh;
+  color:var(--overlay-text-color);
+}
+
+.info{
+  font-size: 28px;
+}
+
+.exit{
+  display:block;
+  position: absolute;
+  top: 20px;
+  right:20px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--overlay-button-border-color);
+  border-radius: 50%;
+  font-family: "Fira Code";
+  font-size: 40px;
+  text-align: center;
+  color: black;
+  background-color: var(--overlay-button-background-color);
+}
+
+.exit > h2{
+  font-size: 38px;
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.exit2{
+  display: inline-block;
+  height: 28px;
+  width: 28px;
+  border: 2px solid var(--overlay-button-border-color);
+  border-radius: 50%;
+  font-family: "Fira Code";
+  font-size: 20px;
+  text-align: center;
+  color: black;
+  background-color: var(--overlay-button-background-color);
+  line-height: 1.1;
+}
+
+.exit2 > h2{
+  display: inline;
+  font-size: 23px;
+  line-height: 1;
+  font-weight: bold;
+  vertical-align: top;
 }
