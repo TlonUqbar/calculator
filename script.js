@@ -72,8 +72,9 @@ function keypad(e){
   if( !(e.key.includes("%") || e.key === "Enter"  || (e.code.includes("Numpad") && !e.key.match(exclude) ) ) ) return;
 
   // get input and separate operators from digits
+  
   if( e.key.match(/[-|+|*|=|\/|%|Enter]/)  ) {
-    if( reg1 && !op1 ) { op1 = e.key; return; }
+    if( reg1 && !op1 && e.key !== '=') { op1 = e.key; return; }
     if( reg1 === '' && op1 === '' && reg2 === ''  && op2 === ''){
       input = (!input && e.key !== "Enter") ? result.toString() : input;
       // Mostly input saving some edge cases
