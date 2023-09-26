@@ -411,14 +411,14 @@ kbd{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap:30px;
+  gap:24px;
   background-color: var(--overlay-background-color) ;
   height: 100dvh;
   color:var(--overlay-text-color);
 }
 
 .info{
-  font-size: 28px;
+  font-size: 24px;
 }
 
 .exit{
